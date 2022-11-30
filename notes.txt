@@ -1,0 +1,30 @@
+react notes
+
+react uses a declarative approach. it utilises a component architecture, this
+combined with state and prop, help to achieve reusable and simple code.
+
+data flow
+in react, data flows in one direction, from the top to the bottom. through the
+use of call back functions, we can pass data from bottom to top.
+
+componentOne(callBackFunc(componentTwo))
+componentTwo(callBackFunc())
+
+class components vs functional components
+
+older react codebases tend to use class components, however,
+since the introduction of functional componnets, modern react codebases will 
+favor functional components to class components
+
+main differences between class components vs functional components:
+    -> functional components allow for the use of react hooks
+    -> functional components do not have access to a render function, they
+       simply return the jsx/html code
+    -> functional components will accept props as an arguement
+    -> functional components are sometimes called stateless components, this is
+       because class components are able to set the state within the component,
+       whereas functional components are not able to do this, however, using
+       hooks it is now possible
+    -> class components will use the render() function that will then return the
+       jsx/html code
+    -> class components have access to use props, aswell as setting the state
