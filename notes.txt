@@ -28,3 +28,21 @@ main differences between class components vs functional components:
     -> class components will use the render() function that will then return the
        jsx/html code
     -> class components have access to use props, aswell as setting the state
+
+setState() is asynchronous, logging a state's value after
+setState() may produce an old, not updated value, as the value
+has not finished
+
+Inorder to get setState() behave synchronously, we can pass
+a function instead of an object to setState()
+
+asynchronous setState():
+setState({ stateName : updatedStateValue });
+
+synchronous setState():
+setState((prevState, props) => ({ 
+   stateName: prevState.stateName + 1 
+}), () =>{
+   // this callback function will only run once all the state changes have 
+   successfully been applied
+});
